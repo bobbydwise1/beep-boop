@@ -5,7 +5,6 @@ function checkNumberIfPositiveInteger(number) {
     return 0;
   }
 }
-
 function makeNewArrayZeroToUserInput(positiveInteger) {
   var finalSize = parseInt(positiveInteger);
   console.log(finalSize);
@@ -17,6 +16,11 @@ function makeNewArrayZeroToUserInput(positiveInteger) {
   console.log(newArray);
   return newArray;
 }
+function applyRulesToSerialNumberArray(arrayOfSerialIntegers) {
+  arrayOfSerialIntegers.forEach(function(element) {
+    if (element ===
+  });
+}
 
 $(document).ready(function() {
   $("form#inputForm").submit(function(event) {
@@ -26,7 +30,9 @@ $(document).ready(function() {
     if (checkNumberIfPositiveInteger(userNumberInput) === 1) {
       makeNewArrayZeroToUserInput(userNumberInput);
 
-} else {$("span.userOutput").text("I'm sorry, your number is invalid.");}
+    } else {
+      $("span.userOutput").text("I'm sorry, your number is invalid.");
+    }
 
 
 //    $("span.userOutput").text(userNumberInput);
