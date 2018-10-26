@@ -19,8 +19,9 @@ function applyRulesToSerialNumberArray(arrayOfSerialIntegers) {
   arrayOfSerialIntegers.forEach(function(element) {
       console.log(element);
     if (regex0.test(element) === true) {
+      console.log(regex0.test(element) === true);
       console.log("Element " + element + " contains char 0.");
-    } else {console.log("false");}
+    } else {console.log("Element " + element + " DOESN'T contain char 0.");}
   });
 }
 
