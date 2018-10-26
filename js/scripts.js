@@ -1,5 +1,5 @@
 function checkNumberIfPositiveInteger(number) {
-  if ((number < 0) && (number % 1 === 0) && (number < 100)) {
+  if ((number > 0) && (number % 1 === 0) && (number < 100)) {
     return 1;
   } else {
     return 0;
@@ -7,18 +7,20 @@ function checkNumberIfPositiveInteger(number) {
 }
 function makeNewArrayZeroToUserInput(positiveInteger) {
   var finalSize = parseInt(positiveInteger);
-  console.log(finalSize);
   var newArray = [];
   for (var index = 0; index <= finalSize; index ++) {
-    console.log("Index: " + index);
     newArray.push(index);
   }
-  console.log(newArray);
   return newArray;
 }
 function applyRulesToSerialNumberArray(arrayOfSerialIntegers) {
+    var regex0 = RegExp("0");
+    var regex1 = RegExp("1");
   arrayOfSerialIntegers.forEach(function(element) {
-    if (element ===
+      console.log(element);
+    if (regex0.test(element) === true) {
+      console.log("Element " + element + " contains char 0.");
+    } else {console.log("false");}
   });
 }
 
@@ -28,8 +30,12 @@ $(document).ready(function() {
     var userNumberInput = $("input#userInput").val();
     // console.log(userNumberInput);
     if (checkNumberIfPositiveInteger(userNumberInput) === 1) {
-      makeNewArrayZeroToUserInput(userNumberInput);
+      var userArray = makeNewArrayZeroToUserInput(userNumberInput);
+      console.log(userArray);
+      applyRulesToSerialNumberArray(userArray);
 
+
+      $("span.userOutput").text(userArray);
     } else {
       $("span.userOutput").text("I'm sorry, your number is invalid.");
     }
