@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $("#inputForm").submit(function(event) {
+  $("form#inputForm").submit(function(event) {
     event.preventDefault();
     var userNumberInput = $("input#userInput").val();
     console.log(userNumberInput);
