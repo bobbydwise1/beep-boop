@@ -1,6 +1,6 @@
-# _Week 3 Friday Project Beep-Boop Converter using Arrays and Loops_
+# _Week 3 Friday Project: Beep-Boop Converter_
 
-#### _Create a Web App that takes a number from user input and returns a predetermined message._
+#### _Create a Web App that takes a number from user input and returns a list with predetermined messages._
 
 #### By _**Robert Lee**_
 
@@ -28,15 +28,15 @@ _2.  Create an array that is the size of (user's number)._
 
 _3.  Begin a loop of each element in the array..._
 
-_4.  If the element in the array contains any "0" character, the entire element is replaced with "Beep!"._
+_4.  If the element in the array contains any "0" character, the entire element is replaced with "Beep!"._  __This rule has the lowest priority.__
   * Example input: "20"
   * Example output: "Beep!"
 
-_5.  If the element in the array contains any "1" character, the entire element is replaced with "Boop!"._
+_5.  If the element in the array contains any "1" character, the entire element is replaced with "Boop!"._  __This rule has the 2nd highest priority.__
   * Example input: "21"
   * Example output: "Boop!"
 
-_6.  If the element cleanly divisible by three, it means the element's modulo is equal to zero when using 3.  If this is true, the element is replaced with the string:  "I'm sorry Dave, I'm afraid I can't do that."_
+_6.  If the element cleanly divisible by three, it means the element's modulo is equal to zero when using 3.  If this is true, the element is replaced with the string:  "I'm sorry Dave, I'm afraid I can't do that."_  __This rule has the highest priority.__
 
   * Example input: 5.  (We note (5 % 3) is equal to 2.)
   * Example output: 5  (No change.)
