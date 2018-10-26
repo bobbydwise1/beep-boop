@@ -1,7 +1,19 @@
+body {
+  background-color: tan;
+}
+
 #result {
   display:none;
 }
 
-.right-justify {
-  float:right;
+h1 {
+  text-align:center;
+}
+
+#instructions {
+
+}
+
+.well {
+  background-color: lightgrey;
 }

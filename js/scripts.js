@@ -35,18 +35,16 @@ $(document).ready(function() { /*This is the start brace for document ready*/
     event.preventDefault();
     var userNumberInput = $("input#userInput").val();
     $("span.userOutput").empty(); /*Delete the previous results*/
-    $("div#result").show();
+    $("div#result").slideDown();
     if (checkNumberIfPositiveInteger(userNumberInput) === 1) {
       var userArray = makeNewArrayZeroToUserInput(userNumberInput);
       var outputArray = applyRulesToSerialNumberArray(userArray); /*This is the conversion function*/
       outputArray.forEach(function(element) {
         $("span.userOutput").append("<li>" + element + "</li>");
+        $("#instructions").slideUp();
       }); /*This is the output logic.  It will create a list as an output.*/
     } else {
       $("span.userOutput").text("I'm sorry, your number is invalid.");
     }
-    $("#ToggleButton").button(function(event) {
-      
-    })
   }); /*This is the end brace for HTML button event monitoring*/
 }); /*This is the end brace for document ready*/
