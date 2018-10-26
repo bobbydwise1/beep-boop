@@ -24,7 +24,7 @@ function applyRulesToSerialNumberArray(arrayOfSerialIntegers) {
     } else if (regex0.test(element) === true) {
       arrayOfSerialIntegers[element] = "Beep!";
     } else {
-      console.log("Number does not change");
+//      console.log("Number does not change");
     }
   });
   return arrayOfSerialIntegers;
@@ -37,7 +37,10 @@ $(document).ready(function() {
     if (checkNumberIfPositiveInteger(userNumberInput) === 1) {
       var userArray = makeNewArrayZeroToUserInput(userNumberInput);
       var outputArray = applyRulesToSerialNumberArray(userArray);
-      $("span.userOutput").text(outputArray.join(" "));
+      outputArray.forEach(function(element) {
+        $("span.userOutput").append("<li>" + element + "</li>");
+      });
+      // $("span.userOutput").text(outputArray.join(" "));
     } else {
       $("span.userOutput").text("I'm sorry, your number is invalid.");
     }
