@@ -39,10 +39,12 @@ $(document).ready(function() { /*This is the start brace for document ready*/
     if (checkNumberIfPositiveInteger(userNumberInput) === 1) {
       var userArray = makeNewArrayZeroToUserInput(userNumberInput);
       var outputArray = applyRulesToSerialNumberArray(userArray); /*This is the conversion function*/
+      /*This is an undo point*/
       outputArray.forEach(function(element) {
         // debugger;
         $("span.userOutput").append("<li>" + element +"</li>");
       }); /*This is the output logic.  It will create a list as an output.*/
+      /*This is an undo point*/
         $("#instructions").slideUp();
     } else {
       $("span.userOutput").text("I'm sorry, your number is invalid.");
