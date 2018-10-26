@@ -45,5 +45,8 @@ $(document).ready(function() { /*This is the start brace for document ready*/
     } else {
       $("span.userOutput").text("I'm sorry, your number is invalid.");
     }
+    $("#ToggleButton").button(function(event) {
+      
+    })
   }); /*This is the end brace for HTML button event monitoring*/
 }); /*This is the end brace for document ready*/
