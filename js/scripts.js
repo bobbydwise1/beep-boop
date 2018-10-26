@@ -40,9 +40,10 @@ $(document).ready(function() { /*This is the start brace for document ready*/
       var userArray = makeNewArrayZeroToUserInput(userNumberInput);
       var outputArray = applyRulesToSerialNumberArray(userArray); /*This is the conversion function*/
       outputArray.forEach(function(element) {
-        $("span.userOutput").append("<li>" + element + "</li>");
-        $("#instructions").slideUp();
+        // debugger;
+        $("span.userOutput").append("<li>" + element +"</li>");
       }); /*This is the output logic.  It will create a list as an output.*/
+        $("#instructions").slideUp();
     } else {
       $("span.userOutput").text("I'm sorry, your number is invalid.");
     }
