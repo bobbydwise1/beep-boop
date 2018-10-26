@@ -9,9 +9,9 @@
     <title>Beep Boop</title>
   </head>
   <body>
-    <div class="container">
-      <h1 class="jumbotron">Beep Boop Converter</h1>
-      <div class="instructions well">
+    <div class="container"><!--This starts the container for the BODY-->
+      <h1 class="well">Beep Boop Converter</h1>
+      <div class="instructions well"><!--This starts the container for the instructions-->
       <p>This program will ask you for a positive integer.  It will then create a sequence of numbers starting from 0 up to your number.  The output display follows some simple rules:</p>
       <ul>
         <li>If a number contains the "0" character, it will be replaced with "Beep!".</li>
@@ -20,7 +20,7 @@
       </u1>
         </ul>
       </div> <!--This ends the container for the instructions-->
-      <form id="inputForm" class="well">
+      <form id="inputForm" class="well"> <!--This starts the container for the form-->
         <div class ="from-group">
           <label for="userInput">Enter a positive integer: </label>
           <input id="userInput" type="number">
@@ -28,11 +28,12 @@
         <div class ="from-group">
         <button type="submit" class="btn btn-default">Submit!</button>
         </div>
-      </form>
+      </form><!--This ends the container for the form-->
 
-      <div id="result">
-        <p>The output is: <span class="userOutput"></span></p>
+      <div id="result" class="well">
+        <h4>The Beep Boop Output is: </h5>
+        <p><span class="userOutput"></span></p>
       </div>
-    </div>
+    </div><!--This ends the container for the BODY-->
   </body>
 </html>
