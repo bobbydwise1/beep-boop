@@ -1,4 +1,4 @@
-# _Week 3 Friday Project Beep-Boop Converter using Arrays and Loops
+# _Week 3 Friday Project Beep-Boop Converter using Arrays and Loops_
 
 #### _Create a Web App that takes a number from user input and returns a predetermined message._
 
@@ -10,27 +10,40 @@ _The expected behavior of the program is as follows:  The user inputs an integer
 
 _The exceptions are:_
 
-*_If any number contains the "0" character, the number is replaced with "Beep!"._
+* _If any number contains the "0" character, the number is replaced with "Beep!"._
 
-*_If any number contains the "1" character, the number is replaced with "Boop!"._
+* _If any number contains the "1" character, the number is replaced with "Boop!"._
 
-*_If a number is divisible by 3 (with no remainder), the number is replaced with "I'm sorry Dave.  I'm afraid I can't do that."_
+* _If a number is divisible by 3 (with no remainder), the number is replaced with "I'm sorry Dave.  I'm afraid I can't do that."_
 
 ## Specifications
 
 _1.  Ask the user for a number input._
+  * Check that the user number is a positive integer.
+  * Consider an upper bounds for the user's number.
 
-_2.  Check that the user's number is an integer, and greater than 0._
+_2.  Create an array that is the size of (user's number)._
+  * The number located at index zero is "0".
+  * The number located at the last index is the user's number.
 
-_3.  The program will need to ._
+_3.  Begin a loop of each element in the array..._
 
-_4.  Find the next largest squared number beyond the string's new length._
+_4.  If the element in the array contains any "0" character, the entire element is replaced with "Beep!"._
+  * Example input: "20"
+  * Example output: "Beep!"
 
-_5.  Put the string into a new array that is the squre of the string's length._
+_5.  If the element in the array contains any "1" character, the entire element is replaced with "Boop!"._
+  * Example input: "21"
+  * Example output: "Boop!"
 
-_6.  Encrypt the string using the CryptoSquare method._
+_6.  If the element cleanly divisible by three, it means the element's modulo is equal to zero when using 3.  If this is true, the element is replaced with the string:  "I'm sorry Dave, I'm afraid I can't do that."_
 
-_7.  Show the final output back to the user._
+  * Example input: 5.  (We note (5 % 3) is equal to 2.)
+  * Example output: 5  (No change.)
+  * Example input: 30.  (We note (30 % 3) is equal to 0.)
+  * Example output: "I'm sorry Dave........"
+
+_7.  Show the final output back to the user.  This must be done in such a way that does not require using the Web browser's "Refresh" button._
 
 ## Setup/Installation Requirements
 
@@ -40,10 +53,10 @@ _7.  Show the final output back to the user._
 
 ## Known Bugs/Issues
 
-* _TYPE BUGS HERE_
+* _TO BE DETERMINED_
 
 ## Technologies Used
 _GitHub, Git, HTML, CSS, Bootstrap, Javascript, JQuery_
 
 ### License
-Copyright (c) 2018 **_BP RL_** MIT license.
+Copyright (c) 2018 **_RL_** MIT license.
